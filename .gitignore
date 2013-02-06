@@ -1,0 +1,9 @@
+config/
+config/base/
+tmp/
+IMG/
+local/
+.backup
+.svn*
+snv*
+.DS_Store
