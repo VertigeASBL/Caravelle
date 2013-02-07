@@ -12,6 +12,16 @@
 </head>
 
 <body class="pas_surlignable page_sommaire">
+	<!-- Script Facebook -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
 	<div class="background_body">
 		
 		<INCLURE{fond=inclure/header, env}>
@@ -152,7 +162,7 @@
 
 						<h3>Rejoignez-nous sur Facebook</h3>
 						<div class='facebook_block'>
-							<img src="images/photoex_facebook.jpg" alt="" />
+							<div class="fb-like-box" data-href="https://www.facebook.com/VieFeminine" data-width="568" data-height="265" data-show-faces="true" data-stream="false" data-header="true"></div>
 						</div>  
 					</div><!--fin colonne principale-->
 
@@ -228,20 +238,7 @@
 			</div><!--fin content-->
 		</div><!--fin super_content-->
 
-		<div class="footer"><!--pour 100% de l'ecran-->
-			<div class="sub_footer"><!--pour centrer-->
-				<div class="sub_footer_background"><!--pour afficher le background-->
-					<ul>
-						<li><img src="images/logo_sponsor.jpg" alt="" /></li>
-						<li><img src="images/logo_sponsor.jpg" alt="" /></li>
-						<li><img src="images/logo_sponsor.jpg" alt="" /></li>
-						<li><img src="images/logo_sponsor.jpg" alt="" /></li>
-						<li><img src="images/logo_sponsor.jpg" alt="" /></li>
-						<li><img src="images/logo_sponsor.jpg" alt="" /></li>
-					</ul>
-				</div><!--fin sub_footer_background-->
-			</div><!--fin sub_footer-->
-		</div><!--fin footer-->
+		<INCLURE{fond=inclure/footer, env}>
 
 		<p class="copy">2013 © Vie F&eacute;minine | <a href="mailto:caravelle@viefeminine.be">caravelle@viefeminine.be</a> | t&eacute;l : 02 227 13 00</p>
 	</div>
