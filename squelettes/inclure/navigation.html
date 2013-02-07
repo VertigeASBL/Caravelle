@@ -1,14 +1,13 @@
 <div class="super_nav_100"><!--pour 100% de l'ecran-->
 	<div class="super_nav"><!--pour centrer-->
 		<div class="nav"><!--menu navigation-->
+			<B_navigation>
 			<ul>
-				<li><a href="article.html">La Caravelle</a></li>
-				<li><a href="#">Les droits / Quels droits ?</a></li>
-				<li><a href="#">Avocats</a></li>
-				<li><a href="#">Programme</a></li>
-				<li><a href="#">Presse</a></li>
-				<li><a href="#">Contacts</a></li>
+				<BOUCLE_navigation(ARTICLES){id_rubrique=1}{par num titre}>
+				[<li><a href="#URL_ARTICLE">(#TITRE)</a></li>]
+				</BOUCLE_navigation>
 			</ul>
+			</B_navigation>
 		</div><!--fin menu navigation-->   
 
 		<div class="nav_right"><!--menu navigation facebook-->
@@ -18,4 +17,4 @@
 			</ul>
 		</div><!--fin nav_right-->
 	</div><!--fin super_nav-->
-		</div><!--fin super_nav_100-->
+</div><!--fin super_nav_100-->

@@ -91,13 +91,13 @@
 					</div><!--fin colonne de gauche-->
 
 					<div class="col_princip"><!--colonne principale-->
-						<h2>La Caravelle des Droits des Femmes</h2>
-						
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus tellus sit amet nunc posuere eget suscipit leo tincidunt. Integer vel mi odio. Etiam non quam dui, vitae ullamcorper purus. Nullam rhoncus neque sed ante eu laoreet felis mollis. Pellentesque vel ipsum quis mauris tempor semper sit amet a ante. Phasellus non risus nulla, vitae rutrum urna. Cras fermentum placerat nisi, non eleifend nisl dignissim convallis. Nulla facilisi.</p>
-
-						<div class="video">
-							<img src="images/photoex_video.jpg" alt="" />
-						</div>
+						<B_introCaravelle>
+						<BOUCLE_introCaravelle(ARTICLES){id_article=7}>
+							[<h2>(#TITRE)</h2>]
+							
+							#TEXTE
+						</BOUCLE_introCaravelle>
+						</B_introCaravelle>
 
 						<h3>Gallerie photo</h3>
 						<div class="gallerie_photo">
@@ -112,60 +112,32 @@
 								</div><!-- fin slider -->
 
 								<div id="thumbs" class="navigation"><!-- liste des miniatures -->
-
+									<B_gallerie>
 									<ul class="thumbs noscript">
+										<BOUCLE_gallerie(ARTICLES){id_rubrique=3}{par date}{0,1}>
+										<B_imgGallerie>
+										
+										<BOUCLE_imgGallerie(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif} {par num titre, date}{doublons}>
 										<li>
-											<a class="thumb selected" name="drop" href="images/photoex_gallerie_1.jpg" title="Title #1">
-												<img src="images/photoex_gallerie_1_thumbs.jpg" alt="Title #1" />
+											<a class="thumb selected" name="drop" href="#URL_DOCUMENT" title="#TITRE" type="#MIME_TYPE">
+												[(#FICHIER
+														|balise_img{#TITRE, }
+														|image_passe_partout{70,70}
+														|image_recadre{70,70}
+														|inserer_attribut{alt,[(#TITRE|attribut_html|couper{80})]})]
 											</a>
 											<div class="caption">
-												<div class="image-desc">Any html can be placed here ...</div>
+												<div class="image-desc">#DESCRIPTIF</div>
 											</div>
 										</li>
-										<li>
-											<a class="thumb" name="drop" href="images/photoex_gallerie_2.jpg" title="Title #1">
-												<img src="images/photoex_gallerie_2_thumbs.jpg" alt="Title #1" />
-											</a>
-											<div class="caption">
-												<div class="image-desc">Any html can be placed here ...</div>
-											</div>
-										</li>
-										<li>
-											<a class="thumb" name="bigleaf" href="images/photoex_gallerie_3.jpg" title="Title #2">
-												<img src="images/photoex_gallerie_3_thumbs.jpg" alt="Title #2" />
-											</a>
-											<div class="caption">
-												<div class="image-desc">Description</div>
-											</div>
-										</li>
-										<li>
-											<a class="thumb" name="lizard" href="images/photoex_gallerie_1.jpg" title="Title #3">
-												<img src="images/photoex_gallerie_1_thumbs.jpg" alt="Title #3" />
-											</a>
-											<div class="caption">
-												<div class="image-desc">Description</div>
-											</div>
-										</li>
-
-										<li>
-											<a class="thumb" href="images/photoex_gallerie_2.jpg" title="Title #4">
-												<img src="images/photoex_gallerie_2_thumbs.jpg" alt="Title #4" />
-											</a>
-											<div class="caption">
-												<div class="image-desc">Description</div>
-											</div>
-										</li>
-
-										<li>
-											<a class="thumb" href="images/photoex_gallerie_3.jpg" title="Title #5">
-												<img src="images/photoex_gallerie_3_thumbs.jpg" alt="Title #5" />
-											</a>
-											<div class="caption">
-												<div class="image-desc">Description</div>
-											</div>
-										</li>
+										</BOUCLE_imgGallerie>
+										
+										</B_imgGallerie>
+										</BOUCLE_gallerie>
 									</ul>
+									</B_gallerie>
 								</div><!-- fin liste des miniatures -->
+								
 								<div class="controls_album"   > 
 									<div id="captionToggle"><!-- pour montrer ou cacher la legende de la photo -->
 										<a href="#toggleCaption" class="off" title="Show Caption">Show Caption</a>
