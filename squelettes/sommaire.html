@@ -13,31 +13,10 @@
 
 <body class="pas_surlignable page_sommaire">
 	<div class="background_body">
-		<div class="super"><!--pour centrer-->
-			<INCLURE{fond=inclure/header, env}>
-		</div>
-
-		<div class="super_nav_100"><!--pour 100% de l'ecran-->
-			<div class="super_nav"><!--pour centrer-->
-				<div class="nav"><!--menu navigation-->
-					<ul>
-						<li><a href="article.html">La Caravelle</a></li>
-						<li><a href="#">Les droits / Quels droits ?</a></li>
-						<li><a href="#">Avocats</a></li>
-						<li><a href="#">Programme</a></li>
-						<li><a href="#">Presse</a></li>
-						<li><a href="#">Contacts</a></li>
-					</ul>
-				</div><!--fin menu navigation-->   
-
-				<div class="nav_right"><!--menu navigation facebook-->
-					<ul>
-						<li class="facebook"><a href="#"></a></li>
-						<li class="mail"><a href="#"></a></li>
-					</ul>
-				</div><!--fin nav_right-->
-			</div><!--fin super_nav-->
-		</div><!--fin super_nav_100-->
+		
+		<INCLURE{fond=inclure/header, env}>
+		
+		<INCLURE{fond=inclure/navigation, env}>
 
 		<div class="super_content"><!--pour 100% de l'ecran-->
 			<div class="content_1028"><!--pour centrer-->
@@ -294,8 +273,8 @@
 
 		<p class="copy">2013 © Vie F&eacute;minine | <a href="mailto:caravelle@viefeminine.be">caravelle@viefeminine.be</a> | t&eacute;l : 02 227 13 00</p>
 	</div>
-<script type="text/javascript">
-jQuery(document).ready(function($) {
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
 // We only want these styles applied when javascript is enabled
 $('div.navigation').css({'width' : '160px', 'float' : 'left'});
 $('div.content').css('display', 'block');
