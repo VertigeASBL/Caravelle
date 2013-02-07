@@ -668,6 +668,7 @@ ______________________________________*/
 ______________________________________*/
 
 .footer{
+	border: 0;
 	clear:left;
 	width:100%;
 	float:left;
@@ -682,7 +683,7 @@ ______________________________________*/
 }
 
 .sub_footer{
-	width:1028px;
+	width:1030px;
 	margin:0 auto 0;
 	text-align:center;
 	clear:left;

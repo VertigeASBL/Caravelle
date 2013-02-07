@@ -35,7 +35,7 @@
 						<h3>Agenda</h3>
 						<div class="block_agenda">
 							<div class="agenda">
-								<img src="images/photoex_agenda.jpg" alt=""  width="190" height="188" /><!--pour l'exemple-->
+								#CALENDRIER_MINI{#ENV{date},'date',#SELF}
 							</div>
 
 							<ul>
@@ -239,8 +239,6 @@
 		</div><!--fin super_content-->
 
 		<INCLURE{fond=inclure/footer, env}>
-
-		<p class="copy">2013 © Vie F&eacute;minine | <a href="mailto:caravelle@viefeminine.be">caravelle@viefeminine.be</a> | t&eacute;l : 02 227 13 00</p>
 	</div>
 	<script type="text/javascript">
 	jQuery(document).ready(function($) {
