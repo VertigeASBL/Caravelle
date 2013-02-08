@@ -1,0 +1,50 @@
+<BOUCLE_principale(ARTICLES) {id_article}>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+[(#REM) Cf.: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+]<!--[if lt IE 7 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie6"> <![endif]-->
+<!--[if IE 7 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie7"> <![endif]-->
+<!--[if IE 8 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie8"> <![endif]-->
+<!--[if IE 9 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js"> <!--<![endif]-->
+<head>
+	<script type='text/javascript'>/*<![CDATA[*/(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);/*]]>*/</script>
+	<title>[(#TITRE|couper{80}|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
+	[<meta name="description" content="(#INTRODUCTION{150}|attribut_html)" />]
+	[<link rel="canonical" href="(#URL_ARTICLE|url_absolue)" />]
+	<INCLURE{fond=inclure/head} />
+</head>
+
+<body class="pas_surlignable page_article">
+	<div class="background_body">
+		
+		<INCLURE{fond=inclure/header, env}>
+		
+		<INCLURE{fond=inclure/navigation, env}>
+
+		<div class="super_content"><!--pour 100% de l'ecran-->
+			<div class="content_1028"><!--pour centrer-->
+				<div class="content_background"><!--pour afficher le background-->
+					<INCLURE{fond=inclure/colonne_gauche, env}>
+
+					<div class="col_princip_article"><!--colonne principale-->
+						[<h1>(#TITRE)</h1>]
+						[<h3>(#LIEU)</h3>]
+						<div class="chapo">[(#CHAPO)]&nbsp;</div>
+						[(#TEXTE|image_reduire{568})]
+						
+						
+						<INCLURE{fond=inclure/evenement, env}>	
+						<div class="fin_article"><!--logo--></div>
+					</div><!--fin colonne principale-->
+
+					<INCLURE{fond=inclure/colonne_droite, env}>
+				</div><!--fin content_background-->
+			</div><!--fin content-->
+		</div><!--fin super_content-->
+
+		<INCLURE{fond=inclure/footer, env}>
+	</div>
+</body>
+</html>
+</BOUCLE_principale>[(#INCLURE{fond=404, erreur=<:aucun_article:>})]
+<//B_principale>

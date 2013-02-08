@@ -1,0 +1,12 @@
+<div class="block_rose_lisere"><!--effet volume-->
+</div>
+<div class="block_rose">
+	<h3>Vie F&eacute;minine</h3>
+	<B_vie_feminine>
+	<BOUCLE_vie_feminine(ARTICLES){id_rubrique=5}{par date}{0,1}>
+	[(#LOGO_ARTICLE|image_passe_partout{164,73}|image_recadre{164,73,center})]
+	[<p>(#CHAPO|couper{235})</p>]
+	<div class="suite"><a href="#URL_ARTICLE" title="[(#TITRE|couper{80})]">» Lire la suite</a></div>
+	</BOUCLE_vie_feminine>
+	</B_vie_feminine>
+</div><!--fin block_rose-->

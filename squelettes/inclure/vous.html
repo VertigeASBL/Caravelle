@@ -1,0 +1,24 @@
+<div class="block_rose_lisere"><!--effet volume-->
+</div>
+<div class="block_rose">
+	<h3>Vous y &eacute;tiez</h3>
+
+	<B_vous>
+	<ul>
+		<BOUCLE_vous(ARTICLES){id_rubrique=6}>
+		<li>
+			[<a href="#URL_ARTICLE" title="[(#TITRE|couper{80})]">(#LOGO_ARTICLE|vider_attribut{class}|image_passe_partout{42,42}|image_recadre{42,42,center})</a>]
+			<h4>
+				<a href="#URL_ARTICLE" title="[(#TITRE|couper{80})]">
+					#TITRE
+					[(#REM) Le &NBSP; dans le lieu sert a forcer l'utilisation du SPAN si la balise lieu est vide. Sinon l'affichage est légèrement cassé. ]
+					<span class="lieu">#LIEU&nbsp;</span>
+					<div class="cit"></div><p>[(#TEXTE|couper{75})]</p>
+				</a>
+			</h4>
+		</li>
+		</BOUCLE_vous>
+	</ul>
+	</B_vous>
+	<div class="suite"><a href="">» Lire la suite</a></div>
+</div><!--fin block_rose-->

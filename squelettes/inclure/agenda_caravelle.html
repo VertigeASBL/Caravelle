@@ -3,37 +3,27 @@
 	<div class="agenda">
 		#CALENDRIER_MINI{#ENV{date},'date',#SELF}
 	</div>
-
+	
+	<B_enevement>
 	<ul>
+		<BOUCLE_enevement(EVENEMENTS){id_rubrique=7}>
+		
+		[(#REM) On va rechercher l'url de l'article. ]
+		<BOUCLE_get_url_event(ARTICLES){id_evenement}>
+			[(#SET{url_evenement, #URL_ARTICLE})]
+		</BOUCLE_get_url_event>
+
 		<li>
-			<a href="">08/04/2013
-				<span class="lieux">Li&egrave;ge - Conf&eacute;rence</span>
+			<a href="#GET{url_evenement}" title="[(#TITRE|couper{80})]">
+				[(#DATE_DEBUT|Agenda_affdate_debut_fin{#DATE_FIN,#HORAIRE})]
+				<span class="lieux">#LIEU - #TITRE</span>
 			</a>
 		</li>
-		<li>
-			<a href="">16/04/2013
-				<span class="lieux">Namur - Ateliers</span>
-			</a>
-		</li>
-		<li>
-			<a href="">
-				24/04/2013
-				<span class="lieux">Verviers - Formation</span>
-			</a>
-		</li>
-		<li>
-			<a href="">
-				26/04/2013
-				<span class="lieux">Bruxelles - Conf&eacute;rence</span>
-			</a>
-		</li>
-		<li>
-			<a href="">
-				30/04/2013
-				<span class="lieux"> Charleroi - Formation</span>
-			</a>
-		</li>
+		</BOUCLE_enevement>
 	</ul>
+	</B_enevement>
+	<p>Aucun événement planifié.</p>
+	<//B_enevement>
 	
 	<div class="event">
 		<a href="">» Voir tous les &eacute;v&eacute;nements</a>

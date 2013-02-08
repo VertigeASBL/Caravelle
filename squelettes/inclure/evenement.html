@@ -1,0 +1,14 @@
+<B_info_evenement>
+<div class="info_evenement">
+	<BOUCLE_info_evenement(EVENEMENTS){id_article}>
+	[<h2>(#TITRE)</h2>]
+	<ul>
+		[<li>(#DATE_DEBUT|Agenda_affdate_debut_fin{#DATE_FIN,#HORAIRE})</li>]
+		[<li>(#LIEU)</li>]
+		[<li>(#DESCRIPTIF|textebrut)</li>]
+		[<li>(#ADRESSE|textebrut)</li>]
+	</ul>
+	</BOUCLE_info_evenement>
+</div>
+</B_info_evenement>
+<//B_info_evenement>

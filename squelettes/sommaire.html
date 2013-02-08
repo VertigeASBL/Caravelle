@@ -6,6 +6,7 @@
 <!--[if IE 9 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js"> <!--<![endif]-->
 <head>
+	<script type='text/javascript'>/*<![CDATA[*/(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);/*]]>*/</script>
 	<title>[(#NOM_SITE_SPIP|textebrut)][ - (#SLOGAN_SITE_SPIP|textebrut)]</title>
 	[<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|couper{150}|textebrut)" />]
 	<INCLURE{fond=inclure/head} />
@@ -31,7 +32,7 @@
 		<div class="super_content"><!--pour 100% de l'ecran-->
 			<div class="content_1028"><!--pour centrer-->
 				<div class="content_background"><!--pour afficher le background-->
-					<INCLURE{fond=inclure/colone_gauche, env}>
+					<INCLURE{fond=inclure/colonne_gauche, env}>
 
 					<div class="col_princip"><!--colonne principale-->
 						<B_introCaravelle>
@@ -99,74 +100,7 @@
 						</div>  
 					</div><!--fin colonne principale-->
 
-					<div class="col_right"><!--colonne de droite-->
-						<div class="block_rose_lisere"><!--effet volume-->
-						</div>
-						<div class="block_rose">
-							<h3>Vie F&eacute;minine</h3>
-							<img src="images/logo_vie_2.jpg" alt="" />
-							<p>Duis sapien mi, porta a pretium sit amet, euismod dapibus tortor. Curabitur nulla velit, venenatis a iaculis et, sodales et dui. Mauris mollis, sapien id lobortis sodales, neque erat congue erat, ac tincidunt orci neque quis sapien...</p>
-							<div class="suite"><a href="">» Lire la suite</a></div>
-						</div><!--fin block_rose-->
-
-						<div class="block_rose_lisere"><!--effet volume-->
-						</div>
-
-						<div class="block_rose">
-							<h3>Vous y &eacute;tiez</h3>
-							<ul>
-								<li>
-									<a href=""><img src="images/photoex_1.jpg" alt="" /></a>
-									<h4>
-										<a href="">
-											Pr&eacute;nom Nom
-											<span class="lieu">Lieu</span>
-										</a>
-									</h4>
-									<div class="cit"></div><p>Nunc gravida volutpat justo, vulputate tincidunt magna gravida rhoncus...</p>
-								</li>
-								<li>
-									<a href=""><img src="images/photoex_1.jpg" alt="" /></a>
-									<h4>
-										<a href="">
-											Pr&eacute;nom Nom
-											<span class="lieu">Lieu</span>
-										</a>
-									</h4>
-									<div class="cit"></div>
-									<p>Nunc gravida volutpat justo, vulputate tincidunt magna gravida rhoncus...</p>
-								</li>
-								<li>
-									<a href=""><img src="images/photoex_1.jpg" alt="" /></a>
-									<h4>
-										<a href="">
-											Pr&eacute;nom Nom
-											<span class="lieu">Lieu</span>
-										</a>
-									</h4>
-									<div class="cit"></div>
-									<p>Nunc gravida volutpat justo, vulputate tincidunt magna gravida rhoncus...</p>
-								</li>
-								<li>
-									<a href=""><img src="images/photoex_1.jpg" alt="" /></a>
-									<h4>
-										<a href="">Pr&eacute;nom Nom
-											<span class="lieu">Lieu</span>
-										</a>
-									</h4>
-									<div class="cit"></div>
-									<p>Nunc gravida volutpat justo, vulputate tincidunt magna gravida rhoncus...</p>
-								</li>
-							</ul>
-
-							<div class="suite"><a href="">» Lire la suite</a></div>
-
-						</div><!--fin block_rose-->
-
-						<div class="banner">
-							<img src="images/banner.jpg" alt="" />
-						</div>
-					</div><!--fin colonne de droite-->
+					<INCLURE{fond=inclure/colonne_droite, env}>
 				</div><!--fin content_background-->
 			</div><!--fin content-->
 		</div><!--fin super_content-->
