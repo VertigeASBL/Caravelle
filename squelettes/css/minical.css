@@ -12,10 +12,10 @@
 .calendriermini table td a{display: block;background: #fff;border: 1px solid #EEE;font-weight: bold;text-decoration: none;color:inherit;}
 .calendriermini .ui-datepicker-other-month {opacity: .5; filter:Alpha(Opacity=50);}
 .calendriermini .ui-datepicker-other-month a {font-weight: normal;background:#eee;}
-.calendriermini .ui-state-highlight a {background: #EAEA98;border-color: #EAEA98;}
+.calendriermini .ui-state-highlight a {background: url(images/evenement.png) center; color: #FFF; width: 25px; height: 25px; }
 .calendriermini .ui-datepicker-today a {border-color:#bbbb99;}
 
-.calendriermini table .ui-state-highlight a:hover{background: #DBB8DC;color: #636;border-color:#DBB8DC;}
+.calendriermini table .ui-state-highlight a:hover{background: none;color: #636; }
 .calendriermini table .ui-state-highlight.ui-datepicker-today a:hover{border-color:#636;}
 .calendriermini span{}
 

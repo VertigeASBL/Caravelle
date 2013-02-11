@@ -1046,7 +1046,7 @@ div.pagination span.ellipsis {
 }
 
 .calendriermini .ui-datepicker-title {
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: normal;
 	color: #FFF;
 	text-transform: uppercase;
@@ -1056,7 +1056,7 @@ div.pagination span.ellipsis {
 	font-weight: normal;
 	text-transform: uppercase;
 	color: #bb70a1;
-	font-size: 9px;
+	font-size: 8px;
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
@@ -1086,4 +1086,30 @@ thead th {
 
 .ui-widget-header {
 	background: #7f0044;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+	background: url(images/evenement.png) center;
+	width: 28px;
+	height: 28px;
+	color: #FFF;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	border: none;
+	font-weight: bold;
+	font-size: 10px;
+}
+
+table.ui-datepicker-calendar td {
+	border: 1px solid #ededed;
+}
+
+.ui-datepicker-today {
+	background: #ededed;
+}
+
+.ui-datepicker-today .ui-state-default {
+	background: #ededed;
+	color: #8c8c8c;
 }
