@@ -2,12 +2,12 @@
 <div class="info_evenement">
 	<BOUCLE_info_evenement(EVENEMENTS){id_article}>
 	[<h2>(#TITRE)</h2>]
-	<ul>
-		[<li>(#DATE_DEBUT|Agenda_affdate_debut_fin{#DATE_FIN,#HORAIRE})</li>]
-		[<li>(#LIEU)</li>]
-		[<li>(#DESCRIPTIF|textebrut)</li>]
-		[<li>(#ADRESSE|textebrut)</li>]
-	</ul>
+	
+	[<p>(#DATE_DEBUT|Agenda_affdate_debut_fin{#DATE_FIN,#HORAIRE})</p>]
+	[<p>(#LIEU)</p>]
+	[(#DESCRIPTIF)]
+	[(#ADRESSE)]
+	
 	</BOUCLE_info_evenement>
 </div>
 </B_info_evenement>

@@ -1,7 +1,7 @@
 <h3>Agenda</h3>
 <div class="block_agenda">
 	<div class="agenda">
-		#CALENDRIER_MINI{#ENV{date},'date',#SELF}
+		#CALENDRIER_MINI{#ENV{date},'date',#URL_PAGE{liste_evenement}}
 	</div>
 	
 	<B_enevement>
@@ -9,7 +9,7 @@
 		<BOUCLE_enevement(EVENEMENTS){id_rubrique=7}>
 		
 		[(#REM) On va rechercher l'url de l'article. ]
-		<BOUCLE_get_url_event(ARTICLES){id_evenement}>
+		<BOUCLE_get_url_event(ARTICLES){id_evenement} {age<0} {par date} {0,5}>
 			[(#SET{url_evenement, #URL_ARTICLE})]
 		</BOUCLE_get_url_event>
 
@@ -26,6 +26,6 @@
 	<//B_enevement>
 	
 	<div class="event">
-		<a href="">» Voir tous les &eacute;v&eacute;nements</a>
+		<a href="#URL_RUBRIQUE{7}">» Voir tous les &eacute;v&eacute;nements</a>
 	</div>
 </div>

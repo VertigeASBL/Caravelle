@@ -21,6 +21,14 @@ a:focus, a:hover, a:active {
 	background-color: transparent;
 }
 
+a {
+	color: #9B0254;
+}
+
+a:hover {
+	color: #ff0189;
+}
+
 /* Découpe de l'intégrateur*/
 /* CSS Document */
 body {
@@ -1112,4 +1120,25 @@ table.ui-datepicker-calendar td {
 .ui-datepicker-today .ui-state-default {
 	background: #ededed;
 	color: #8c8c8c;
+}
+
+.ui-widget-content {
+	border-color: #ededed;
+}
+
+.ui-datepicker-prev {
+	cursor: pointer;
+}
+
+.ui-datepicker-next {
+	cursor: pointer;
+}
+
+.elementAgenda h3 {
+	margin: 0;
+	margin-top: 10px;
+}
+
+.elementAgenda p {
+	margin: 0;
 }
