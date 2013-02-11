@@ -3,8 +3,8 @@
 		<div class="nav"><!--menu navigation-->
 			<B_navigation>
 			<ul>
-				<BOUCLE_navigation(ARTICLES){id_rubrique=1}{par num titre}>
-				[<li><a href="#URL_ARTICLE">(#TITRE)</a></li>]
+				<BOUCLE_navigation(RUBRIQUES){id_parent=1}{par num titre}>
+				[<li><a href="#URL_RUBRIQUE">(#TITRE)</a></li>]
 				</BOUCLE_navigation>
 			</ul>
 			</B_navigation>
