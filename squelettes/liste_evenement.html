@@ -29,11 +29,15 @@
 						<h1>Agenda</h1>
 						<BOUCLE_event(EVENEMENTS){agendafull date_debut,date_fin,jour,(#ENV{date}|annee),(#ENV{date}|mois),(#ENV{date}|jour)}{statut=publie}>
 						<div class="elementAgenda">
-							[<h3><a href="#URL_ARTICLE" title="#TITRE">(#TITRE)</a></h3>]
+							[<h3><a href="#URL_ARTICLE" title="[(#TITRE|couper{80})]">(#TITRE)</a></h3>]
 							[<p>(#DATE_DEBUT|Agenda_affdate_debut_fin{#DATE_FIN,#HORAIRE})</p>]
 							[<p>(#LIEU)</p>]
 							[(#DESCRIPTIF)]
+							[<div class="right"><a href="(#URL_ARTICLE)" title="[(#TITRE|couper{80})]">» En savoir plus.</a></div>]
+							<div class="clear"></div>
 						</div>
+						<div class="separateur"><!--logo--></div>
+						
 						</BOUCLE_event>
 						
 						<div class="fin_article"><!--logo--></div>

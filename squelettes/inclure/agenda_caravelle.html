@@ -6,15 +6,9 @@
 	
 	<B_enevement>
 	<ul>
-		<BOUCLE_enevement(EVENEMENTS){id_rubrique=7}>
-		
-		[(#REM) On va rechercher l'url de l'article. ]
-		<BOUCLE_get_url_event(ARTICLES){id_evenement} {age<0} {par date} {0,5}>
-			[(#SET{url_evenement, #URL_ARTICLE})]
-		</BOUCLE_get_url_event>
-
+		<BOUCLE_enevement(EVENEMENTS){age<0}{par date_debut}>
 		<li>
-			<a href="#GET{url_evenement}" title="[(#TITRE|couper{80})]">
+			<a href="#URL_ARTICLE" title="[(#TITRE|couper{80})]">
 				[(#DATE_DEBUT|Agenda_affdate_debut_fin{#DATE_FIN,#HORAIRE})]
 				<span class="lieux">#LIEU - #TITRE</span>
 			</a>

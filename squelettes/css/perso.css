@@ -1134,6 +1134,14 @@ table.ui-datepicker-calendar td {
 	cursor: pointer;
 }
 
+.elementAgenda {
+	width: 300px;
+}
+
+.elementAgenda .right a {
+	font-size: 12px;
+}
+
 .elementAgenda h3 {
 	margin: 0;
 	margin-top: 10px;
@@ -1141,4 +1149,10 @@ table.ui-datepicker-calendar td {
 
 .elementAgenda p {
 	margin: 0;
+}
+
+.separateur {
+	background: url(images/separateur.png) no-repeat center;
+	height: 50px;
+	width:568px;
 }

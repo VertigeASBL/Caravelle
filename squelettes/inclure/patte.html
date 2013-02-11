@@ -1,0 +1,38 @@
+<B_menu_patte>
+<nav id="patte">
+	<ul id="menu">
+		[(#REM) Boucle principal du menu Patte ]
+		<BOUCLE_menu_patte(RUBRIQUES){id_parent=16}{par num titre}>
+		<li id="#TITRE" class="lvl0"><p class="rotation">#TITRE</p>
+			<ul class="lvl1">
+				
+				[(#REM) Affiche les sous-articles ]
+				<BOUCLE_sous_menu_patte(ARTICLES){id_rubrique}{par num titre, date}{inverse}{0,5}>
+				<li><a href="#URL_ARTICLE" title="#TITRE">#TITRE</a></li>
+				</BOUCLE_sous_menu_patte>
+				
+				[(#REM) Affiche les sous-rubrique ]
+				<BOUCLE_sous_rubrique(RUBRIQUES){id_parent}>
+				<li class="sublvl1">#TITRE
+					<ul class="lvl2">
+						[(#REM) 3 ème niveau de navigation ]			
+						<BOUCLE_sous_sous_menu_patte(ARTICLES){id_rubrique}{par num titre}>
+						<li><a href="#URL_ARTICLE" title="#TITRE">#TITRE</a></li>
+						</BOUCLE_sous_sous_menu_patte>
+					
+						<BOUCLE_site_reference(SITES){id_rubrique}{par nom_site}>
+						<li><a href="#URL_SITE" title="[(#DESCRIPTIF|textebrut)]">#NOM_SITE</a></li>
+						</BOUCLE_site_reference>
+					</ul>
+				</li>
+				</BOUCLE_sous_rubrique>
+			</ul>
+		</li>
+		</BOUCLE_menu_patte>
+		
+		<BOUCLE_patte_article(ARTICLES){id_rubrique=16}>
+		<li id="#TITRE"><p class="rotation"><a href="#URL_ARTICLE">#TITRE</a></p></li>
+		</BOUCLE_patte_article>
+	</ul>
+</nav>
+</B_menu_patte>
