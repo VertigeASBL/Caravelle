@@ -1156,3 +1156,25 @@ table.ui-datepicker-calendar td {
 	height: 50px;
 	width:568px;
 }
+
+/*CSS sous menu*/
+.nav ul li {
+	position: relative;
+}
+
+.nav ul.sous-menu {
+	display: none;
+	position: absolute;
+	top: 44px;
+	list-style-position: outside;
+	margin: 0;
+}
+
+.nav ul li ul.sous-menu li {
+	float: none;
+}
+
+/*Faire apparaitre le menu au survol*/
+.nav ul li:hover ul.sous-menu {
+	display: block;
+}
