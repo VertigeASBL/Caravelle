@@ -36,7 +36,7 @@
 							[<div class="right"><a href="(#URL_ARTICLE)" title="[(#TITRE|couper{80})]">» En savoir plus.</a></div>]
 							<div class="clear"></div>
 						</div>
-						<div class="separateur"><!--logo--></div>
+						[(#COMPTEUR_BOUCLE|!={#TOTAL_BOUCLE}|oui) <div class="separateur"></div> ]
 						
 						</BOUCLE_event>
 						

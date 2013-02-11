@@ -29,11 +29,13 @@
 					<INCLURE{fond=inclure/colonne_gauche, env}>
 
 					<div class="col_princip_article"><!--colonne principale-->
-						[<h1>(#TITRE)</h1>]
 						[(#REM) Si on est dans un agenda, on affiche les agendas. ]
 						[(#AGENDA|oui) <INCLURE{fond=inclure/tous_les_evenements, env}> ]
 						[(#REM) Sinon, on affiche la liste des articles de la rubriques. ]
-						[(#AGENDA|non) <INCLURE{fond=inclure/liste_article_rubrique, env}> ]
+						[(#AGENDA|non) 
+						[<h1>(#TITRE)</h1>]
+						<INCLURE{fond=inclure/liste_article_rubrique, env}> 
+						]
 
 						<div class="fin_article"><!--logo--></div>
 					</div><!--fin colonne principale-->

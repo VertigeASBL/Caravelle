@@ -3,11 +3,14 @@
 <div class="info_evenement">
 	<BOUCLE_info_evenement(EVENEMENTS){id_rubrique}{age<0}{par date_debut}>
 	<div class="elementAgenda">
-		[<h3><a href="#URL_ARTICLE" title="#TITRE">(#TITRE)</a></h3>]
+		[<h3><a href="#URL_ARTICLE" title="[(#TITRE|couper{80})]">(#TITRE)</a></h3>]
 		[<p>(#DATE_DEBUT|Agenda_affdate_debut_fin{#DATE_FIN,#HORAIRE})</p>]
 		[<p>(#LIEU)</p>]
 		[(#DESCRIPTIF)]
+		[<div class="right"><a href="(#URL_ARTICLE)" title="[(#TITRE|couper{80})]">» En savoir plus.</a></div>]
+		<div class="clear"></div>
 	</div>
+	[(#COMPTEUR_BOUCLE|!={#TOTAL_BOUCLE}|oui) <div class="separateur"></div> ]
 	</BOUCLE_info_evenement>
 </div>
 </B_info_evenement>

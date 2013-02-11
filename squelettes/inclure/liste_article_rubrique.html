@@ -7,7 +7,7 @@
 	
 	[<div class="right"><a href="(#URL_ARTICLE)" title="[(#TITRE|couper{80})]">Lire la suite</a></div>]
 	<div class="clear"></div>
-	<div class="separateur"></div>
+	[(#COMPTEUR_BOUCLE|!={#TOTAL_BOUCLE}|oui) <div class="separateur"></div> ]
 </BOUCLE_article_rubrique>
 </B_article_rubrique>
 <p>Il n'y a aucun article dans cette rubrique.</p>
