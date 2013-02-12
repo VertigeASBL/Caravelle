@@ -1,0 +1,50 @@
+<h3>Gallerie photo</h3>
+<div class="gallerie_photo">
+	<!-- Start Advanced Gallery Html Containers -->
+	<div id="gallery" class="content">
+		<div class="slider"><!-- grande photo -->
+			<div class="slideshow-container">
+				<div id="loading" class="loader"></div>
+				<div id="slideshow" class="slideshow"></div>
+				<div id="caption" class="caption-container"></div>
+			</div><!-- fin slideshow-container -->
+		</div><!-- fin slider -->
+
+		<div id="thumbs" class="navigation"><!-- liste des miniatures -->
+			<B_gallerie>
+			<ul class="thumbs noscript">
+				<BOUCLE_gallerie(ARTICLES){id_rubrique=3}{par date}{inverse}{0,1}>
+				<B_imgGallerie>
+
+				<BOUCLE_imgGallerie(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif} {par num titre, date}{doublons}>
+				<li>
+					<a class="thumb selected" name="drop" href="[(#FICHIER|image_passe_partout{408,230}|image_recadre{408,230}|extraire_attribut{src})]" title="#TITRE" type="#MIME_TYPE">
+						[(#FICHIER
+						|balise_img{#TITRE, }
+						|image_passe_partout{70,70}
+						|image_recadre{70,70}
+						|inserer_attribut{alt,[(#TITRE|attribut_html|couper{80})]})]
+					</a>
+					<div class="caption">
+						<div class="image-desc">#DESCRIPTIF</div>
+					</div>
+				</li>
+				</BOUCLE_imgGallerie>
+
+				</B_imgGallerie>
+				</BOUCLE_gallerie>
+			</ul>
+			</B_gallerie>
+		</div><!-- fin liste des miniatures -->
+
+		<div class="controls_album"   > 
+			<div id="captionToggle"><!-- pour montrer ou cacher la legende de la photo -->
+				<a href="#toggleCaption" class="off" title="Show Caption">Show Caption</a>
+			</div>
+			<div id="controls" class="controls"></div><!-- pour les boutons next et prev -->
+			<div class="album"><a href="#URL_RUBRIQUE{3}">» Voir tous les albums photo</a></div> 
+		</div> 
+		<!-- End Advanced Gallery Html Containers -->
+	</div><!-- fin gallerie -->
+	<div style="clear: both;"></div>
+</div>

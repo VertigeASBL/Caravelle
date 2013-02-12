@@ -1099,7 +1099,6 @@ thead th {
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
 	background: url(images/evenement.png) center;
 	width: 28px;
-	height: 28px;
 	color: #FFF;
 }
 
@@ -1165,6 +1164,7 @@ table.ui-datepicker-calendar td {
 .nav ul.sous-menu {
 	display: none;
 	position: absolute;
+	left:0;
 	top: 44px;
 	list-style-position: outside;
 	margin: 0;
@@ -1173,6 +1173,7 @@ table.ui-datepicker-calendar td {
 
 .nav ul li ul.sous-menu li {
 	float: none;
+	width: auto;
 }
 
 /*Faire apparaitre le menu au survol*/
