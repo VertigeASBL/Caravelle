@@ -5,21 +5,26 @@
 			<ul>
 				<BOUCLE_navigation(RUBRIQUES){id_parent=1}{par num titre}>
 				<li><a href="#URL_RUBRIQUE">#TITRE</a>
-				
+					
 					[(#REM) On regarde s'il y a plus d'un sous articles ]
 					<B_cpt_article>
 					<BOUCLE_cpt_article(ARTICLES){id_rubrique}>[(#SET{nb_art, #TOTAL_BOUCLE})]</BOUCLE_cpt_article>
 					</B_cpt_article>
 					
-					[(#REM) S'il y a plus de 1 article dans la rubrique, on envoie du html pour le menu ]
-					<B_sous_article>
+					[(#REM) On affiche les sous menu ]
 					<ul class="sous-menu">
-					<BOUCLE_sous_article(ARTICLES){si #GET{nb_art}|>{1}}{id_rubrique}>
+						
+						[(#REM) S'il y a plus de 1 article dans la rubrique, on envoie du html pour le menu ]
+						<BOUCLE_sous_article(ARTICLES) {si #GET{nb_art}|>{1}} {id_rubrique}>
 						<li><a href="#URL_ARTICLE" title="[(#TITRE|couper{80})]">#TITRE</a></li>
-					</BOUCLE_sous_article>
+						</BOUCLE_sous_article>
+						
+						[(#REM) On affiche les sous-rubriques ]
+						<BOUCLE_sous_rubrique(RUBRIQUES){id_parent}>
+						<li><a href="#URL_RUBRIQUE" title="[(#TITRE|couper{80})]">#TITRE</a></li>
+						</BOUCLE_sous_rubrique>
+						
 					</ul>
-					</B_sous_article>
-				
 				</li>
 				</BOUCLE_navigation>
 			</ul>

@@ -1,7 +1,7 @@
 /*On vire le spip par défaut*/
 body {
 	border: 0;
-	background: none;
+	background: none;	
 }
 
 /* On ajoute le @font-face que l'intégrateur à oublié. */
@@ -1168,6 +1168,7 @@ table.ui-datepicker-calendar td {
 	top: 44px;
 	list-style-position: outside;
 	margin: 0;
+	z-index: 3;
 }
 
 .nav ul li ul.sous-menu li {

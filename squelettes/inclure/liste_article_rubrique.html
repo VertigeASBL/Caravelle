@@ -1,14 +1,20 @@
+[(#REM) Ce squelette Affiche tout les articles d'une rubriques ]
 <B_article_rubrique>
-<BOUCLE_article_rubrique(ARTICLES){id_rubrique}>
-	[<h3><a href="#URL_ARTICLE" title="[(#TITRE|couper{80})]">(#TITRE)</a></h3>]
-	
-	[(#CHAPO|oui) [<div class="chapo">(#CHAPO)</div>] ]
-	[(#CHAPO|non) [<div class="chapo"><p>(#TEXTE|couper{400})</p></div>] ]
-	
-	[<div class="right"><a href="(#URL_ARTICLE)" title="[(#TITRE|couper{80})]">Lire la suite</a></div>]
-	<div class="clear"></div>
-	[(#COMPTEUR_BOUCLE|!={#TOTAL_BOUCLE}|oui) <div class="separateur"></div> ]
+#ANCRE_PAGINATION
+<BOUCLE_article_rubrique(ARTICLES){id_rubrique}{pagination}>
+
+[<h3><a href="#URL_ARTICLE" title="[(#TITRE|couper{80})]">(#TITRE)</a></h3>]
+
+[(#CHAPO|oui) [<div class="chapo">(#CHAPO)</div>] ]
+[(#CHAPO|non) [<div class="chapo"><p>(#TEXTE|couper{400})</p></div>] ]
+
+[<div class="right"><a href="(#URL_ARTICLE)" title="[(#TITRE|couper{80})]">Lire la suite</a></div>]
+<div class="clear"></div>
+
+<div class="separateur"></div>
+
 </BOUCLE_article_rubrique>
+[<p class="pagination">(#PAGINATION)</p>]
 </B_article_rubrique>
 <p>Il n'y a aucun article dans cette rubrique.</p>
 <//B_article_rubrique>
