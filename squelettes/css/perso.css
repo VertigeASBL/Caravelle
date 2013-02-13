@@ -1173,10 +1173,15 @@ table.ui-datepicker-calendar td {
 
 .nav ul li ul.sous-menu li {
 	float: none;
-	width: auto;
+	width: 100%;	
+}
+
+.nav ul li ul.sous-menu li a {
+	width: 100%;
 }
 
 /*Faire apparaitre le menu au survol*/
 .nav ul li:hover ul.sous-menu {
 	display: block;
+	width: 100%;
 }
