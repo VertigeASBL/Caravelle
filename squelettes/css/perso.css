@@ -756,6 +756,14 @@ ______________________________________*/
 	margin:0 0 20px 20px;
 	padding:0;
 }
+
+.col_princip_article li, .col_princip_article table {
+	font-size:0.75em;
+	line-height:1.4em;
+}
+
+
+
 .col_princip_article p{
 	font-size:0.75em;
 	line-height:1.4em;
