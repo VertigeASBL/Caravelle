@@ -2,7 +2,7 @@
 <B_article_rubrique>
 #ANCRE_PAGINATION
 <BOUCLE_article_rubrique(ARTICLES){id_rubrique}{pagination}>
-[(#LOGO_ARTICLE|image_reduire{200})]
+[(#LOGO_ARTICLE|image_reduire{150})]
 [<h3><a href="#URL_ARTICLE" title="[(#TITRE|couper{80})]">(#TITRE)</a></h3>]
 
 [(#CHAPO|oui) [<div class="chapo">(#CHAPO)</div>] ]
@@ -32,7 +32,7 @@
 
 <div class="clear"></div>
 
-<div class="separateur"></div>
+[(#COMPTEUR_BOUCLE|modulo{10}|!={0}|et{#COMPTEUR_BOUCLE|!={#GRAND_TOTAL}}) <div class="separateur"></div> ]
 
 </BOUCLE_article_rubrique>
 [<p class="pagination">(#PAGINATION)</p>]
