@@ -1,4 +1,6 @@
-<BOUCLE_principale(RUBRIQUES) {id_rubrique}>
+#HTTP_HEADER{HTTP/1.0  #ENV{code,'404 Not Found'}}
+#HTTP_HEADER{"Cache-Control: no-store, no-cache, must-revalidate"}
+#HTTP_HEADER{Pragma: no-cache}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 [(#REM) Cf.: http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
 ]<!--[if lt IE 7 ]> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js ie ie6"> <![endif]-->
@@ -8,15 +10,11 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html dir="#LANG_DIR" lang="#LANG" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" class="[(#LANG_DIR)][ (#LANG)] no-js"> <!--<![endif]-->
 <head>
 	<script type='text/javascript'>/*<![CDATA[*/(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);/*]]>*/</script>
-	<title>[(#TITRE|couper{80}|textebrut) - ][(#NOM_SITE_SPIP|textebrut)]</title>
-	[<meta name="description" content="(#INTRODUCTION{150}|textebrut)" />]
-	[<link rel="canonical" href="(#URL_RUBRIQUE|url_absolue)" />]
+	<title><:pass_erreur:> [(#ENV{code, 404}|textebrut)] - [(#NOM_SITE_SPIP|textebrut)]</title>
 	<INCLURE{fond=inclure/head} />
-	[(#REM) Lien vers le flux RSS des articles la rubrique ]
-	<link rel="alternate" type="application/rss+xml" title="<:syndiquer_rubrique:>" href="[(#URL_PAGE{backend}|parametre_url{id_rubrique,#ID_RUBRIQUE})]" />
+	<meta name="robots" content="none" />
 </head>
-
-<body class="pas_surlignable page_rubrique">
+<body class="pas_surlignable page_404">
 	<div class="background_body">
 		
 		<INCLURE{fond=inclure/header, env}>
@@ -29,13 +27,8 @@
 					<INCLURE{fond=inclure/colonne_gauche, env}>
 
 					<div class="col_princip_article"><!--colonne principale-->
-						[(#REM) Si on est dans un agenda, on affiche les agendas. ]
-						[(#AGENDA|oui) <INCLURE{fond=inclure/tous_les_evenements, env}> ]
-						[(#REM) Sinon, on affiche la liste des articles de la rubriques. ]
-						[(#AGENDA|non) 
-						[<h1>(#TITRE)</h1>]
-						<INCLURE{fond=inclure/liste_article_rubrique, env}> 
-						]
+						<h1>404 - ERROR</h1>
+						<p>Il n'y a rien ici.</p>
 
 						<div class="fin_article"><!--logo--></div>
 					</div><!--fin colonne principale-->
@@ -49,4 +42,3 @@
 	</div>
 </body>
 </html>
-</BOUCLE_principale>
