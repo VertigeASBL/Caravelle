@@ -1195,3 +1195,7 @@ table.ui-datepicker-calendar td {
 	display: block;
 	width: 100%;
 }
+
+table.spip {
+	width: auto;
+}
