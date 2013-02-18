@@ -1,7 +1,7 @@
 <B_info_evenement>
 <h1>Tout les événements</h1>
 <div class="info_evenement">
-	<BOUCLE_info_evenement(EVENEMENTS){id_parent}{age<0}{par date_debut} {pagination}>
+	<BOUCLE_info_evenement(EVENEMENTS){id_parent}{age<=0}{par date_debut} {pagination}>
 	<div class="elementAgenda">
 		[<h3><a href="#URL_ARTICLE" title="[(#TITRE|couper{80})]">(#TITRE)</a></h3>]
 		[<p>(#DATE_DEBUT|Agenda_affdate_debut_fin{#DATE_FIN,#HORAIRE})</p>]

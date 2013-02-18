@@ -1,4 +1,4 @@
-<h3>Gallerie photo</h3>
+<h3>Galerie photo</h3>
 <div class="gallerie_photo">
 	<!-- Start Advanced Gallery Html Containers -->
 	<div id="gallery" class="content">
@@ -13,7 +13,7 @@
 		<div id="thumbs" class="navigation"><!-- liste des miniatures -->
 			<B_gallerie>
 			<ul class="thumbs noscript">
-				<BOUCLE_gallerie(ARTICLES){id_rubrique=3}{par date}{inverse}{0,1}>
+				<BOUCLE_gallerie(ARTICLES){id_rubrique=3}{id_mot=1}{par date}{inverse}{0,1}>
 				<B_imgGallerie>
 
 				<BOUCLE_imgGallerie(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif} {par num titre, date}{doublons}>
