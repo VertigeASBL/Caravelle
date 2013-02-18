@@ -7,6 +7,15 @@
 		[<p>(#DATE_DEBUT|Agenda_affdate_debut_fin{#DATE_FIN,#HORAIRE})</p>]
 		[<p>(#LIEU)</p>]
 		[(#DESCRIPTIF)]
+			
+		<B_get_region>
+		<p>
+		<BOUCLE_get_region(RUBRIQUES){id_rubrique}>
+			#TITRE
+		</BOUCLE_get_region>
+		</p>
+		</B_get_region>
+		
 		[<div class="right"><a href="(#URL_ARTICLE)" title="[(#TITRE|couper{80})]">» En savoir plus.</a></div>]
 		<div class="clear"></div>
 	</div>
