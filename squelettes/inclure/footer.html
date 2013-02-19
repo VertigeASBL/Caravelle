@@ -3,7 +3,7 @@
 		<div class="sub_footer_background"><!--pour afficher le background-->
 			<B_sponsor>
 			<ul>
-				<BOUCLE_sponsor(ARTICLES){id_rubrique=4}>
+				<BOUCLE_sponsor(ARTICLES){id_rubrique=4}{par num titre}>
 				[<li>(#LOGO_ARTICLE|vider_attribut{class})</li>]
 				</BOUCLE_sponsor>
 			</ul>
@@ -13,3 +13,16 @@
 </div><!--fin footer-->
 
 <p class="copy">[(#DATE|affdate{Y})] © Vie F&eacute;minine | <a href="mailto:[(#EMAIL_WEBMASTER)]">[(#EMAIL_WEBMASTER)]</a> | t&eacute;l : 02 227 13 00 | <a href="#URL_ECRIRE">Espace privé</a></p>
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-38601024-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>

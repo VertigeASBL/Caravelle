@@ -1143,7 +1143,7 @@ table.ui-datepicker-calendar td {
 }
 
 .elementAgenda {
-	width: 300px;
+	width: auto;
 }
 
 .elementAgenda .right a {
@@ -1153,6 +1153,7 @@ table.ui-datepicker-calendar td {
 .elementAgenda h3 {
 	margin: 0;
 	margin-top: 10px;
+	font-size: 18px;
 }
 
 .elementAgenda p {
@@ -1187,7 +1188,7 @@ table.ui-datepicker-calendar td {
 }
 
 .nav ul li ul.sous-menu li a {
-	width: 100%;
+	width: 200px;
 }
 
 /*Faire apparaitre le menu au survol*/
@@ -1198,4 +1199,15 @@ table.ui-datepicker-calendar td {
 
 table.spip {
 	width: auto;
+}
+
+/*Texte en évidence*/
+.caractencadre-spip {
+	background: none;
+	color: #5D5C59;
+}
+
+.texteencadre-spip {
+	background: #ffdce6;
+	border-color: #4a0025;
 }

@@ -82,7 +82,7 @@ $('#captionToggle a').click(function(e) {
 	var isOff = link.hasClass('off');
 	var removeClass = isOff ? 'off' : 'on';
 	var addClass = isOff ? 'on' : 'off';
-	var linkText = isOff ? 'Hide Caption' : 'Show Caption';
+	var linkText = isOff ? 'Cacher la légende' : 'Montrer la légende';
 	captionOpacity = isOff ? 0.8 : 0.0;
 
 	link.removeClass(removeClass).addClass(addClass).text(linkText).attr('title', linkText);
@@ -105,8 +105,8 @@ var gallery = $('#thumbs').galleriffic({
 	loadingContainerSel:       '#loading',
 	renderSSControls:          true,
 	renderNavControls:         true,
-	playLinkText:              'Play Slideshow',
-	pauseLinkText:             'Pause Slideshow',
+	playLinkText:              'Lancer le diaporama',
+	pauseLinkText:             'Pause du diaporama',
 	prevLinkText:              '&lsaquo; Previous Photo',
 	nextLinkText:              'Next Photo &rsaquo;',
 	nextPageLinkText:          'Next &rsaquo;',

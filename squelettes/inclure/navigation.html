@@ -15,12 +15,12 @@
 					<ul class="sous-menu">
 						
 						[(#REM) S'il y a plus de 1 article dans la rubrique, on envoie du html pour le menu ]
-						<BOUCLE_sous_article(ARTICLES) {si #GET{nb_art}|>{1}} {id_rubrique}>
+						<BOUCLE_sous_article(ARTICLES) {si #GET{nb_art}|>{1}} {id_rubrique}{par num titre}>
 						<li><a href="#URL_ARTICLE" title="[(#TITRE|couper{80})]">#TITRE</a></li>
 						</BOUCLE_sous_article>
 						
 						[(#REM) On affiche les sous-rubriques ]
-						<BOUCLE_sous_rubrique(RUBRIQUES){id_parent}>
+						<BOUCLE_sous_rubrique(RUBRIQUES){id_parent}{par num titre}>
 						<li><a href="#URL_RUBRIQUE" title="[(#TITRE|couper{80})]">#TITRE</a></li>
 						</BOUCLE_sous_rubrique>
 						
