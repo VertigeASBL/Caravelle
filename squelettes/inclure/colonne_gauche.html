@@ -1,22 +1,8 @@
 <div class="col_left"><!--colonne de gauche-->
 	<INCLURE{fond=inclure/agenda_caravelle, env}>
-
-	<h3>Activit&eacute;s</h3>
 	
-	<img src="#CHEMIN{images/carte_caravelle.png}" alt="Carte Caravelle" style="width: 210px;" usemap="#map" />
-	
-	[(#REM) Map de la carte avec leur Liens ]
-	<map name="map" id="map">
-		<area shape="circle" coords="18,16,5" href="#URL_RUBRIQUE{22}" alt="Tournai" title="Tournai" />
-		<area shape="circle" coords="64,36,5" href="#URL_RUBRIQUE{19}" alt="Mons" title="Mons" />
-		<area shape="circle" coords="84,54,5" href="#URL_RUBRIQUE{15}" alt="Charleroi" title="Charleroi" />
-		<area shape="circle" coords="80,6,5" href="#URL_RUBRIQUE{23}" alt="Bruxelles" title="Bruxelles" />
-		<area shape="circle" coords="110,22,5" href="#URL_RUBRIQUE{17}" alt="Nivelles" title="Nivelles" />
-		<area shape="circle" coords="123,53,5" href="#URL_RUBRIQUE{21}" alt="Namur/Dinant" title="Namur/Dinant" />
-		<area shape="circle" coords="138,32,5" href="#URL_RUBRIQUE{18}" alt="Huy" title="Huy" />
-		<area shape="circle" coords="172,32,5" href="#URL_RUBRIQUE{14}" alt="Liège" title="Liège" />
-		<area shape="circle" coords="155,87,5" href="#URL_RUBRIQUE{16}" alt="Marche en Famenne/Neufchâteau/Virton" title="Marche en Famenne/Neufchâteau/Virton" />
-		<area shape="circle" coords="194,35,5" href="#URL_RUBRIQUE{20}" alt="Eupen" title="Eupen" />
-	</map>
-	
+	<h3>Les activités dans votre région</h3>
+	<div class="block_orange_form">	
+		#FORMULAIRE_REGION
+	</div>
 </div><!--fin colonne de gauche-->
