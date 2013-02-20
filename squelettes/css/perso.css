@@ -699,7 +699,7 @@ ______________________________________*/
 	clear:left;
 }
 
-.sub_footer_background{
+.sub_footer_background {
 	width:1028px;
 	background-image:url(images/fond_sub.jpg);
 	background-repeat:no-repeat;
@@ -708,20 +708,13 @@ ______________________________________*/
 	padding:0;
 	padding-bottom:20px;
 	float:left;
-}
-
-.sub_footer ul{
-	list-style:none;
-	margin:60px 0 0;
-	padding:0;
-}
-.sub_footer li{
-	float:left;
-	margin:20px 20px 0 0;
+	text-align:center;
 }
 
 .sub_footer img{
 	border:none;
+	margin:20px 20px 0 0;
+	margin-top: 80px;
 }
 p.copy{
 	clear:left;
@@ -1204,7 +1197,7 @@ table.spip {
 /*Texte en évidence*/
 .caractencadre-spip {
 	background: none;
-	color: #5D5C59;
+	color: #EE9200;
 }
 
 .texteencadre-spip {

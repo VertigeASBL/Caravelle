@@ -2,11 +2,9 @@
 	<div class="sub_footer"><!--pour centrer-->
 		<div class="sub_footer_background"><!--pour afficher le background-->
 			<B_sponsor>
-			<ul>
-				<BOUCLE_sponsor(ARTICLES){id_rubrique=4}{par num titre}>
-				[<li>(#LOGO_ARTICLE|vider_attribut{class})</li>]
-				</BOUCLE_sponsor>
-			</ul>
+			<BOUCLE_sponsor(ARTICLES){id_rubrique=4}{par num titre}>
+			[(#LOGO_ARTICLE|vider_attribut{class})]
+			</BOUCLE_sponsor>
 			</B_sponsor>
 		</div><!--fin sub_footer_background-->
 	</div><!--fin sub_footer-->
