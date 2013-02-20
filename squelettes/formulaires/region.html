@@ -7,7 +7,7 @@
 		<select name="ville" size="1">
 			<option value="none"></option>
 			<BOUCLE_get_region(RUBRIQUES){id_parent=11}{par num titre}>
-			<option value="#URL_RUBRIQUE">#TITRE</option>
+			[<option value="#URL_RUBRIQUE">(#TITRE|couper{30})</option>]
 			</BOUCLE_get_region>
 		</select>
 		</B_get_region>
