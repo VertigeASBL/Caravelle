@@ -15,7 +15,7 @@
 					<ul class="sous-menu">
 						
 						[(#REM) S'il y a plus de 1 article dans la rubrique, on envoie du html pour le menu ]
-						<BOUCLE_sous_article(ARTICLES) {si #GET{nb_art}|>{1}} {id_rubrique} {id_rubrique != 50} {par num titre}>
+						<BOUCLE_sous_article(ARTICLES) {si #GET{nb_art}|>{1}} {id_rubrique} {id_rubrique !IN 50, 3} {par num titre}>
 						<li><a href="#URL_ARTICLE" title="[(#TITRE|couper{80})]">#TITRE</a></li>
 						</BOUCLE_sous_article>
 						
