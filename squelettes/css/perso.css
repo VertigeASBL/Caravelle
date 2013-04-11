@@ -25,7 +25,7 @@ a {
 	color: #9B0254;
 }
 
-a:hover {
+a:focus, a:hover, a:active {
 	color: #d0006f;
 }
 
@@ -409,7 +409,7 @@ ______________________________________*/
 }
 
 
-.block_orange_form input{
+/*.block_orange_form input{
 	border:none;
 	width:32px;
 	height:33px;
@@ -426,7 +426,7 @@ ______________________________________*/
 	top:-1px;
 	left:175px;
 	z-index:2;
-}
+}*/
 
 /*  bloc jeunes filles
 ______________________________________*/
@@ -746,8 +746,8 @@ ______________________________________*/
 	padding:0;
 }
 .col_princip_article img{
-	float:right;
-	margin:0 0 20px 20px;
+	/*float:right;
+	margin:0 0 20px 20px;*/
 	padding:0;
 }
 
@@ -782,6 +782,7 @@ ______________________________________*/
 	background-repeat:no-repeat;
 	padding:0;
 	margin:0;
+	clear: both;
 }
 
 /*  styles pour la gallerie photo
@@ -1203,4 +1204,14 @@ table.spip {
 .texteencadre-spip {
 	background: #ffdce6;
 	border-color: #4a0025;
+}
+
+.note {
+	font-size: 13px;
+}
+
+.sub_footer_background .spip_documents {
+	display: inline-block;
+	margin: 0;
+	text-align: none;
 }

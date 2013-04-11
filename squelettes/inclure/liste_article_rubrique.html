@@ -1,7 +1,7 @@
 [(#REM) Ce squelette Affiche tout les articles d'une rubriques ]
 <B_article_rubrique>
 #ANCRE_PAGINATION
-<BOUCLE_article_rubrique(ARTICLES){id_rubrique}{pagination}>
+<BOUCLE_article_rubrique(ARTICLES){id_rubrique} {par num titre}{pagination}>
 [(#LOGO_ARTICLE|image_reduire{150})]
 [<h3><a href="#URL_ARTICLE" title="[(#TITRE|couper{80})]">(#TITRE)</a></h3>]
 
@@ -12,7 +12,7 @@
 <B_documents_portfolio>
 <div class="bloc clearfix" id="documents_portfolio">
 	<ul>
-		<BOUCLE_documents_portfolio(DOCUMENTS) {id_article} {mode=document}{extension IN png,jpg,gif} {par num titre, date}{doublons}{vu=non}>[
+		<BOUCLE_documents_portfolio(DOCUMENTS) {id_article} {mode=document}{extension IN png,jpg,gif} {par num titre, date}{doublons}{vu=non}{0,5}>[
 		<li>
 			<a href="(#URL_DOCUMENT)" type="#MIME_TYPE" onclick="location.href='[(#URL_ARTICLE|url_absolue
 			|parametre_url{id_document,#ID_DOCUMENT}

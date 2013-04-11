@@ -16,7 +16,7 @@
 				<BOUCLE_gallerie(ARTICLES){id_rubrique=3}{id_mot=1}{par date}{inverse}{0,1}>
 				<B_imgGallerie>
 
-				<BOUCLE_imgGallerie(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif} {par num titre, date}{doublons}>
+				<BOUCLE_imgGallerie(DOCUMENTS){id_article}{mode=document}{extension IN png,jpg,gif} {par num titre, date}{doublons}{0,6}>
 				<li>
 					<a class="thumb selected" name="drop" href="[(#FICHIER|image_passe_partout{408,230}|image_recadre{408,230}|extraire_attribut{src})]" title="#TITRE" type="#MIME_TYPE">
 						[(#FICHIER
