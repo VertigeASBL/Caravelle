@@ -804,6 +804,12 @@ ______________________________________*/
 	margin:0;
 	padding:0;
 }
+
+.content .album a, div.navigation .album a { 
+    font-size: 0.9em;
+    color: #e88d24;
+}
+
 .content a:focus, div.content a:hover, div.content a:active {
 	text-decoration: none;
 	margin:0;
