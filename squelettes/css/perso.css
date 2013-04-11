@@ -172,7 +172,7 @@ ______________________________________*/
 
 .nav li a, .nav ul li a{
 	border: none;
-	font-size:0.9em;
+	font-size:0.8em;
 	display:block;
 	background-image:url(images/fond_nav.jpg);
 	background-repeat:repeat-x;
