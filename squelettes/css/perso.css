@@ -1221,3 +1221,10 @@ table.spip {
 	margin: 0;
 	text-align: none;
 }
+
+/*
+*   marge s'il n'y a pas de logo pour les articles de la sectio "vous y étiez"
+*/
+.marge-no-logo {
+    margin-left: 20px;
+}

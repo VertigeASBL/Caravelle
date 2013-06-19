@@ -8,7 +8,7 @@
 		<BOUCLE_vous(ARTICLES){id_rubrique=6}>
 		<li>
 			[<a href="#URL_ARTICLE" title="[(#TITRE|couper{80})]">(#LOGO_ARTICLE|vider_attribut{class}|image_passe_partout{42,42}|image_recadre{42,42,center})</a>]
-			<h4>
+			<h4 [(#LOGO_ARTICLE|non) class="marge-no-logo"]>
 				<a href="#URL_ARTICLE" title="[(#TITRE|couper{80})]">
 					#TITRE
 					[(#REM) Le &NBSP; dans le lieu sert a forcer l'utilisation du SPAN si la balise lieu est vide. Sinon l'affichage est légèrement cassé. ]
