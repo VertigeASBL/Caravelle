@@ -616,7 +616,6 @@ ______________________________________*/
 }
 
 .block_rose h4 {
-	display:inline;
 	color:#9b0254;
 	font-size:0.9em;
 	font-weight:normal;
@@ -661,12 +660,12 @@ ______________________________________*/
 	background-image:url(images/guillemet.png);
 	background-repeat:no-repeat;
 	background-position:left;
-	margin:0px 4px 0 20px;
+	margin:0px 4px 0 0px;
 	padding:0;
 }
 
 .block_rose li p{
-	margin:0px 0 10px 20px;
+	margin:0px 0 10px 0px;
 	padding:0;
 }
 
@@ -1226,5 +1225,5 @@ table.spip {
 *   marge s'il n'y a pas de logo pour les articles de la sectio "vous y étiez"
 */
 .marge-no-logo {
-    margin-left: 20px;
+    padding-left: 20px;
 }
