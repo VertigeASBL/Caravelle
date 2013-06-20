@@ -1222,8 +1222,15 @@ table.spip {
 }
 
 /*
-*   marge s'il n'y a pas de logo pour les articles de la sectio "vous y étiez"
+*   Marge s'il n'y a pas de logo pour les articles de la sectio "vous y étiez"
 */
 .marge-no-logo {
     padding-left: 20px;
+}
+
+/*
+*   Réduction de la taille de la typo dans la lightbox
+*/
+#cboxTitle {
+    font-size: 0.7em;
 }
